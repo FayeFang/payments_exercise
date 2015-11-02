@@ -8,8 +8,8 @@ A payment should not be able to be created that exceeds the outstanding balance 
 
 A payment model has been created and belongs to a loan. In addition, every loan has many payments.
 
-Every payment has a amount, which is validated to never exceed the outstanding balance. It also has a post date which should be either the same as the creation date, or could be a future date at user's discretion.
+Every payment has a positive amount, which is validated to never exceed the outstanding balance. It also has a post date which should be either the same as the creation date, or could be a future date at user's discretion.
 
-In the payment controller, #index shows all payments for the specific loan. #show shows that particular payments. #create creates a payment.
+In the payments controller, #index shows all payments for the specific loan. #show shows that particular payments. #create creates a payment.
 
 Rspec tests are also written to fully test every controller and model methods. The coverage of the tests written are 100%.
