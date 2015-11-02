@@ -11,6 +11,8 @@
 class Loan < ActiveRecord::Base
   has_many :payments
 
+  validates :funded_amount, presence: true, numericality: { greater_than: 0 }
+
   def outstanding_balance
     funded_amount - payments.sum(:amount)
   end

@@ -36,6 +36,9 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'simplecov'
 end
 
 group :development do

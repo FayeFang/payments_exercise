@@ -20,6 +20,8 @@ class Payment < ActiveRecord::Base
   private
 
   def amount_cannot_exceed_outstanding_balance
+    # to facilitate rspec testing on validating presence of loan_id and amount
+    return unless amount && loan_id
     errors.add(:amount, "can't exceed outstanding balance") if amount > loan.outstanding_balance
   end
 
